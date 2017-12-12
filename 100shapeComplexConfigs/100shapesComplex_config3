@@ -1,0 +1,76 @@
+# config file
+# use with ./run.sh <config_file> <problem_instance.txt>
+
+
+#location for logs and solutions
+log=logs/100ShapesComplexlog3
+solution=solutions/100ShapesComplexsolution3
+
+
+# Seed value for the random number generator -- "None" initializes time-stamp based randomization
+seed="None"
+
+
+#evolutionary strategy type... 'plus' enables a (μ + λ)-EA  while  'comma' enables a (μ , λ)-EA
+strategy="plus"
+
+
+# number of evaluations
+evals=10000
+
+
+# number of program run-throughs
+runs=30
+
+
+# mu represents the number of parents
+mu=10
+
+
+# lambda represents the number of offspring
+lambda=100
+
+
+# parent selection type:
+# 'rand' for Uniform Random selection.
+# 'fps' for Fitness Proportional Selection.
+# 'tournament' k-Tournament Selection with replacement'
+pSelection="rand"
+
+
+# integer value represents the number of competition in k-tournament parent selection
+pkval=2
+
+
+# survival selection type:
+# 'rand' for Uniform Random selection.
+# 'fps' for Fitness Proportional Selection.
+# 'tournament' k-Tournament Selection with replacement'.
+# 'truncate' for truncation method
+sSelection="rand"
+
+
+# integer value represents the number of competition in k-tournament survival selection
+skval=10
+
+
+# mutation rate: value between 0 and 10,000, representing the chance that an offspring will be mutated during gene crossover
+mRate=1000
+
+
+# 0 represents termination after all of the evaluations have been completed
+# 1 terminates if no change in top non-dominated level of population for n generations
+term=0
+
+
+# EA -- value for termination convergence criterion
+nVal=50
+
+
+# EA -- value for penalty coefficient. this float value is multiplied by the number of overlapping points in an invalid solution
+#        and added to the fitness number of the solution. 0 for no penalty.
+pCoefficient=0
+
+
+#EA -- flag to turn self adaptivity on(1) or off(0). This feature sets the initial mutation rate at 80% and gradually
+selfAdaptive=0
